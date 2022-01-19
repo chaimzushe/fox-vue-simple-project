@@ -1,4 +1,5 @@
 <template>
+<div> 
   <Header @generate-users="generateUsers()" />
 
   <h3 class="header">Meet our Crew</h3>
@@ -8,6 +9,7 @@
   <div class="list">
     <UserCard :key="user.id" v-for="user in users" :user="user" />
   </div>
+</div>
 </template>
 
 <script>
