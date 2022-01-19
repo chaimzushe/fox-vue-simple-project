@@ -72,6 +72,7 @@ body {
 @media (max-width: 500px) {
   .list {
     grid-template-columns: 1fr;
+    padding: 0 6px;
   }
   .header {
     font-size: 40px;
