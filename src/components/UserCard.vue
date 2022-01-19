@@ -15,8 +15,7 @@
 export default {
   name: "UserCard",
   props: {
-    user: Object,
-    default: {},
+    user: Object
   },
   methods: {
     contactUser() {
