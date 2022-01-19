@@ -1,7 +1,7 @@
 <template>
   <Header @generate-users="generateUsers()" />
 
-  <h3  class="header">Meet our Crew</h3>
+  <h3 class="header">Meet our Crew</h3>
   <div v-show="loading" class="loader">
     <Loader />
   </div>
@@ -30,16 +30,15 @@ export default {
     };
   },
   methods: {
-    generateUsers() {
+   async generateUsers() {
       this.loading = true;
       this.user = [];
-      axios.get("https://randomuser.me/api?results=20").then((response) => {
-        this.loading = false;
-        this.users = response.data.results;
-      });
+      const response = await axios.get("https://randomuser.me/api?results=20");
+      this.users = response.data.results;
+      this.loading = false;
     },
   },
-  mounted() {
+  created() {
     this.generateUsers();
   },
 };
@@ -68,12 +67,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   box-sizing: border-box;
 }
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .list {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
   .header {
-      font-size: 40px;
+    font-size: 40px;
   }
 }
 </style>
