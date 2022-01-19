@@ -7,6 +7,7 @@
 <script>
 export default {
   name: "Header",
+  emits: ["generate-users"]
 };
 </script>
 
