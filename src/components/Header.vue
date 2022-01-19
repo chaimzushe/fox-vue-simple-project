@@ -36,4 +36,11 @@ export default {
   border: none;
 }
 
+@media(max-width: 500px) {
+  .btn {
+    width: 100%;
+  }
+
+}
+
 </style>

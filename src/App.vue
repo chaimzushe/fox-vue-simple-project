@@ -49,6 +49,7 @@ export default {
 body {
   background-color: #f5f4f4;
   font-family: sans-serif;
+  margin: 0;
 }
 .loader {
   position: absolute;
