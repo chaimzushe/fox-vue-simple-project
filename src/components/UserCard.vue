@@ -30,7 +30,8 @@ export default {
 <style scoped>
 .user-card {
   background: white;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 400px;
   margin: auto;
   text-align: center;

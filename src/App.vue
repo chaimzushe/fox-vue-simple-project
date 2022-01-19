@@ -67,4 +67,12 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   box-sizing: border-box;
 }
+@media(max-width: 500px) {
+  .list {
+    grid-template-columns: 1fr
+  }
+  .header {
+      font-size: 40px;
+  }
+}
 </style>
